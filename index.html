@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>GeoMera — A Private Real Estate Atelier</title>
+<meta name="description" content="GeoMera is a private real estate atelier that approaches development through the timeless relationship between geometry, proportion, place, and human experience.">
+
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="/favicon-512x512.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+<link rel="canonical" href="https://www.geomeraatelier.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeoMera">
+<meta property="og:title" content="GeoMera — A Private Real Estate Atelier">
+<meta property="og:description" content="GeoMera is a private real estate atelier that approaches development through the timeless relationship between geometry, proportion, place, and human experience.">
+<meta property="og:url" content="https://www.geomeraatelier.com/">
+<meta property="og:image" content="https://www.geomeraatelier.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="GeoMera — A Private Real Estate Atelier">
+<meta name="twitter:description" content="GeoMera is a private real estate atelier that approaches development through the timeless relationship between geometry, proportion, place, and human experience.">
+<meta name="twitter:image" content="https://www.geomeraatelier.com/og-image.png">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,700;1,9..144,400;1,9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  /* ========================================================
+     GEOMERA — HOMEPAGE
+     Concept: the site as a piece of rock — GeoMera's philosophy
+     is literally about land and geometry, so the page carries a
+     genuine geometric identity: a hand-built low-poly rock/crystal
+     formation (real triangulated facets, not a stock icon),
+     built entirely from the nine approved tones with Desert Sage
+     as the dominant facet colour. No photography needed to feel
+     alive — the geometry itself is the visual centrepiece.
+     Palette — nine approved tones, nothing else, no blue:
+       Warm Ivory #F5F0E8 · Limestone #E7DDD0 · Soft Sand #D8C6AF
+       Stone Taupe #A89682 · Earth Brown #5B4638 (ink)
+       Muted Terracotta #A66A47 · Desert Clay #8A5A3B
+       Desert Sage #8A8A73 · Golden Light #D8B36A
+
+     ------------------------------------------------------------
+     HOW TO EDIT THIS PAGE YOURSELF
+     ------------------------------------------------------------
+     TEXT — every heading and paragraph lives in the HTML body
+     below, inside plain <h1>/<h2>/<h3>/<p> tags. Scroll to the
+     <!-- ============ SECTION NAME ============ --> comment for
+     the part of the page you want, then edit the words between
+     the tags directly. You cannot break the layout by changing
+     text — only by deleting a tag itself, so leave every < > tag
+     in place and just change the words inside.
+
+     COLORS — every color on the page is one of the 9 named
+     variables just below (--ivory, --sage, --brown, etc). To
+     recolor something, find where it's used (search the file for
+     the class name, e.g. ".btn") and swap var(--sage) for another
+     variable name from this list — never type a new hex code, or
+     it will fall outside the approved palette.
+
+     SPACING / SIZE — most spacing uses clamp(min, preferred, max)
+     — e.g. clamp(28px, 4vw, 40px) means "at least 28px, at most
+     40px, scaling in between." To make something bigger or
+     smaller, adjust the min/max numbers, not the middle one.
+
+     DRAWINGS (the geometric line art) — each one sits inside an
+     "invisible box" class, e.g. .drawing-box--amphitheater.
+     Adjust the box's padding to move a drawing; leave the svg
+     coordinates alone, they're precision-drawn and easy to distort
+     by hand.
+
+     BUTTONS — search for ".btn-sage" or ".btn-brown" for the
+     button color, ".btn" for the button font/size shared by all
+     of them.
+
+     WHEN IN DOUBT — come back and describe the change in plain
+     language (e.g. "make the hero heading bigger" or "change this
+     paragraph"); the structure above is meant to make it easy to
+     try things yourself first, not to replace asking for help.
+
+     ------------------------------------------------------------
+     HOW TO ADD A REAL PHOTO LATER
+     ------------------------------------------------------------
+     This page currently has no photography by design (the whole
+     visual identity is hand-drawn geometry instead). When you're
+     ready to add a real photo:
+       1. Put the image file in the same folder as this index.html
+          file (e.g. a file named "estate-01.jpg" right next to it).
+       2. Use the ready-made .photo-frame pattern (defined below,
+          search for ".photo-frame"), like this:
+            <div class="photo-frame">
+              <img src="estate-01.jpg" alt="Describe the photo here">
+            </div>
+       3. That's it — .photo-frame already handles sizing, cropping,
+          and the site's border/frame style consistently. Don't add
+          your own width/height to the <img> tag itself.
+     If you're not sure where on the page a photo should go, that's
+     the one part worth asking for help with — placement affects the
+     rest of the layout around it.
+  ======================================================== */
+
+  :root{
+    --ivory:      #F5F0E8;
+    --limestone:  #E7DDD0;
+    --sand:       #D8C6AF;
+    --taupe:      #A89682;
+    --brown:      #5B4638;
+    --terracotta: #A66A47;
+    --clay:       #8A5A3B;
+    --sage:       #8A8A73;
+    --gold:       #D8B36A;
+    --ink: var(--brown);
+
+    --serif: "Fraunces", "Times New Roman", serif;
+    --sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
+
+    --container: 1240px;
+    --gutter: clamp(24px, 6vw, 96px);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--ivory);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+
+  h1,h2,h3{
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  .wrap{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
+  }
+
+  .reveal{
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity .8s ease, transform .8s ease;
+  }
+  .reveal.in{ opacity:1; transform: translateY(0); }
+  @media (prefers-reduced-motion: reduce){
+    .reveal{ opacity:1; transform:none; transition:none; }
+    html{ scroll-behavior:auto; }
+  }
+
+  .eyebrow{
+    font-size: 0.74rem;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--clay);
+    font-weight: 500;
+    display:block;
+    margin-bottom: 20px;
+  }
+
+  /* ---------------- PHOTO FRAME (ready for future use) ----------------
+     Reusable box for a real photograph. Not used anywhere on the page
+     yet — this page currently has no photography by design. When a
+     photo is ready, wrap it exactly like:
+       <div class="photo-frame"><img src="file.jpg" alt="..."></div>
+     Handles consistent aspect ratio, cropping, and framing so a photo
+     dropped in later automatically matches the site's visual language
+     (a thin taupe border, same family as .field-plate) without any
+     extra CSS. Adjust --photo-ratio to change the crop shape. */
+  .photo-frame{
+    --photo-ratio: 4 / 3;
+    width: 100%;
+    aspect-ratio: var(--photo-ratio);
+    overflow: hidden;
+    border: 1px solid var(--taupe);
+    background: var(--limestone);
+  }
+  .photo-frame img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .facet-mark{ width: 30px; height:auto; display:block; margin-bottom: 22px; }
+
+  /* Solid, confident calls to action — slimmer padding and a
+     lighter touch than before, but font-size is held at 1.2rem
+     (19.2px) minimum: on Desert Sage, Ivory text only clears WCAG
+     AA at "large text" size (>=18.66px bold), so this is the
+     smallest this can go while staying accessible. Elegance comes
+     from the reduced padding/letter-spacing/icon size instead. */
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap: 9px;
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 0.015em;
+    text-transform: none;
+    padding: 12px 24px;
+    border-radius: 1px;
+    transition: transform .3s ease, background-color .3s ease;
+  }
+  .btn:hover{ transform: translateY(-2px); }
+  .btn svg{ width:11px; height:11px; }
+  .btn-brown{ background: var(--sage); color: var(--ivory); }
+  .btn-brown:hover{ background: var(--brown); }
+  .btn-sage{ background: var(--sage); color: var(--ivory); }
+  .btn-sage:hover{ background: var(--brown); }
+  .btn-ivory{ background: var(--ivory); color: var(--brown); }
+  .btn-ivory:hover{ background: var(--sand); }
+
+  /* ---------------- NAV ---------------- */
+  header.site-nav{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items:center;
+    column-gap: 20px;
+    padding: 26px var(--gutter);
+    background: rgba(245,240,232,0);
+    border-bottom: 1px solid transparent;
+    transition: background-color .5s ease, padding .4s ease, border-color .4s ease;
+  }
+  header.site-nav.solid{
+    background: rgba(245,240,232,0.94);
+    backdrop-filter: blur(10px);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--sage);
+  }
+  .logo-group{ display:flex; align-items:center; gap:12px; grid-column:1; justify-self:start; }
+  .logo-group svg{ width:58px; height:auto; }
+  header.site-nav .logo-group svg{ width:136px; }
+  .logo{
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+  }
+  /* Nav redesigned as an equal-width "tab" index — each link its own
+     fixed-width cell with a thin divider line and a small gold index
+     number above the label, like an architectural drawing index or
+     museum wayfinding sign. Every tab occupies the same space as its
+     neighbor regardless of label length ("Founder" vs "GeoMera
+     Experience"), so the row reads as one measured, designed object
+     rather than loosely-spaced text links. The CTA stays a distinct
+     button outside the tab-group, since it's an action, not a page. */
+  nav.primary-links{ display:flex; align-items:center; gap: 0; grid-column:2; justify-self:center; }
+  .tab-group{ display:flex; align-items:center; gap: 12px; }
+  /* Each tab lives inside its own sage roundel -- a small echo of the
+     circular Gem Roundel logo, so the whole nav reads as one family of
+     round marks rather than the logo sitting alone against text links.
+     Idle: quiet sage-tinted glass ring. Hover: the circle fills solid
+     sage, the label flips to ivory, and a soft gold halo blooms around
+     the edge -- the same warmth as light catching the logo's facets. */
+  .tab-group > a, .tab-group > .tab-cell{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width: 78px; height: 78px;
+    flex: 0 0 78px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 4px 9px;
+    background: rgba(138,138,115,0.08);
+    border: 1.5px solid var(--sage);
+    position: relative;
+    transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+  }
+  .tab-num{ display:none; }
+  /* RULE: nav tab labels are never forced into ALL CAPS. Every tab
+     (Founder, Philosophy, Design Principles, Practice, GeoMera
+     Approach, GeoMera Textile) renders in the exact case typed in the
+     HTML -- title case, no text-transform. This was inconsistent
+     before (some tabs uppercase, some not) and is now locked as one
+     rule for the whole row, not a per-tab exception. */
+  .tab-label{
+    font-size: 0.62rem; letter-spacing: 0.02em; line-height: 1.2; color: var(--ink);
+    font-weight: 600;
+    text-align:center;
+    transition: color .3s ease;
+  }
+  .tab-group > a:hover, .tab-cell:hover{
+    background: var(--sage);
+    border-color: var(--sage);
+    box-shadow: 0 0 0 4px rgba(216,179,106,0.32);
+    transform: translateY(-2px);
+  }
+  .tab-group > a:hover .tab-label, .tab-cell:hover .tab-label{
+    color: var(--ivory);
+  }
+  /* "Design Principles" carries Spatial Studies as a nested sub-item —
+     Spatial Studies is a growing archive of case studies that apply
+     the principles above to specific historic plans, so it now sits
+     one level down in the nav rather than as its own top-level
+     destination. Desktop: reveals as a small bordered dropdown plate
+     on hover/focus, matching the site's other bordered "plate" boxes.
+     Mobile: shown as a static indented link underneath instead, since
+     there's no hover state on touch. */
+  .tab-cell{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; }
+  .tab-cell > a{ display:flex; flex-direction:column; align-items:center; gap:5px; position:relative; }
+  .tab-caret{ font-size:0.48rem; color: var(--gold); margin-top:-1px; }
+  .tab-sub{
+    position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(-4px);
+    background: var(--ivory); border:1px solid var(--taupe);
+    min-width:168px; padding:6px 0;
+    opacity:0; pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index:20;
+  }
+  .tab-cell:hover .tab-sub, .tab-cell:focus-within .tab-sub{
+    opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0);
+  }
+  .tab-sub a{
+    display:block; padding:9px 18px;
+    font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+    color: var(--ink); white-space:nowrap;
+  }
+  .tab-sub a:hover{ background: var(--limestone); color: var(--terracotta); }
+  /* Kept at 1.2rem (19.2px) bold — the WCAG floor for Ivory-on-Sage
+     text (AA "large text" needs >=18.66px bold; this site's sage/
+     ivory combo tests at 3.1:1 contrast, which only clears AA at
+     that size). The "too big" fix is tighter padding, not smaller
+     text, plus a smooth transition so it never visually jumps
+     against the header's own padding animation when scrolling. */
+  .nav-cta{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width: 78px; height: 78px;
+    flex: 0 0 78px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 4px 9px;
+    background: var(--sage);
+    border: 1.5px solid var(--sage);
+    color: var(--ivory) !important;
+    font-size: 0.7rem !important; font-weight: 700 !important;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-align:center; text-transform:uppercase;
+    font-family: var(--serif) !important; font-style: italic;
+    margin-left: 18px;
+    transition: background-color .3s ease, color .3s ease, box-shadow .3s ease, transform .3s ease;
+  }
+  .nav-cta:hover{
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink) !important;
+    box-shadow: 0 0 0 4px rgba(138,138,115,0.28);
+    transform: translateY(-2px);
+  }
+
+  .menu-toggle{
+    display:none; flex-direction:column; gap:5px;
+    background:none; border:none; cursor:pointer; z-index:1100;
+    grid-column:3; justify-self:end;
+  }
+  .menu-toggle span{ width:26px; height:2px; background: var(--ink); }
+
+  /* ---------------- HERO ---------------- */
+  .hero{
+    position:relative;
+    min-height: 100svh;
+    display:flex;
+    align-items:center;
+    overflow:hidden;
+  }
+  .hero-row{
+    width:100%;
+    max-width: 1560px;
+    margin: 0 auto;
+    padding: clamp(150px, 16vw, 180px) var(--gutter) clamp(70px, 9vw, 120px);
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    gap: clamp(40px, 6vw, 100px);
+  }
+  .hero-content{ max-width: 720px; text-align:center; margin: 0 auto; }
+
+  .hero-statement{
+    font-size: clamp(2.2rem, 4.8vw, 3.9rem);
+    line-height: 1.12;
+    font-weight: 400;
+    margin-bottom: 32px;
+  }
+  .hero-lead{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+    color: var(--ink);
+    margin-bottom: 26px;
+  }
+  .hero-body{
+    font-size: clamp(1.1rem, 1.2vw, 1.2rem);
+    font-weight: 400;
+    color: var(--ink);
+    margin: 0 auto 18px;
+    max-width: 500px;
+  }
+  .hero-quote{
+    margin: 30px auto 40px;
+    max-width: 480px;
+    padding-top: 18px;
+    border-top: 1px solid var(--sage);
+    border-left: none;
+    padding-left: 0;
+  }
+  .hero-quote p{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.5vw, 1.35rem);
+    line-height: 1.5;
+  }
+
+  /* The rock — a real hand-triangulated formation built from the
+     approved palette. Its own flex track: cannot overlap the copy
+     at any width. Hidden below 1050px where there's no room to
+     give it space worthy of the centrepiece it is. */
+  .hero-rock-frame{ flex: 0 0 auto; width: 100%; max-width: 420px; margin: 0 auto; }
+  .hero-rock-frame svg{ width:100%; height:auto; }
+  @media (max-width: 1050px){ .hero-rock-frame{ display:none; } }
+
+  /* ---------------- SECTION SHELL ---------------- */
+  section{ position:relative; }
+  .section-pad{ padding: clamp(90px, 11vw, 170px) 0; }
+  #contact.section-pad{ padding-bottom: clamp(50px, 6vw, 80px); }
+  .bg-limestone{ background: var(--limestone); }
+  .bg-ivory{ background: var(--ivory); }
+
+  /* ---------------- STONE FIELD (reusable) ----------------
+     Desert Sage field with the Flower of Life etched into it,
+     content set on an ivory plate — the site's one recurring
+     "closing" device: used for the enquiry section on this page
+     and the footer, and meant to be reused on every future page
+     wherever the design calls for a considered, geometric close
+     rather than a plain block colour. */
+  .stone-field{
+    position:relative;
+    background: var(--sage);
+    overflow:hidden;
+  }
+  .flower-of-life{
+    position:absolute;
+    top:50%; left:50%;
+    transform: translate(-50%,-50%);
+    width: min(1200px, 150vw);
+    height:auto;
+    pointer-events:none;
+  }
+  /* The plate is deliberately compact — a considered card, not a
+     full-width block — with the bold gem as a genuine companion
+     to the text rather than a corner flourish. */
+  .field-plate{
+    position:relative;
+    z-index:1;
+    max-width: 640px;
+    margin: 0 auto;
+    background: var(--ivory);
+    border: 1px solid var(--taupe);
+    padding: clamp(24px, 3.5vw, 38px);
+    display:flex;
+    align-items:center;
+    gap: clamp(20px, 3vw, 36px);
+  }
+  /* Big, bold gem-cut motif in the full approved palette — its own
+     flex track, so it can never sit across the copy at any width;
+     hidden below 680px where the plate has no room to hold both. */
+  .gem-frame{ flex: 0 1 150px; }
+  .gem-frame svg{ width:100%; height:auto; }
+  @media (max-width: 680px){ .gem-frame{ display:none; } }
+
+  /* ---------------- PHILOSOPHY ---------------- */
+  .philosophy{
+    display:grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: clamp(40px, 6vw, 130px);
+    align-items:start;
+  }
+  .philosophy .reveal{
+    position: sticky;
+    top: 140px;
+  }
+  .philosophy h2{
+    font-size: clamp(1.8rem, 3.2vw, 2.7rem);
+    line-height: 1.3;
+  }
+  /* Framed box — same bordered "plate" convention used for every
+     other diagram on the site (see .principle-plate on the Design
+     Principles page). A drawing never sits loose on the page; it
+     always has a defined edge to anchor it. Left-aligned to sit
+     directly under the heading above it, at a fixed, modest width
+     so it reads as a considered detail, not a stretched-out block. */
+  .drawing-box--amphitheater{
+    width: 100%;
+    padding: clamp(20px, 3vw, 32px) 0;
+    display: flex;
+    justify-content: flex-start;
+  }
+  .philo-plate{
+    width: 100%;
+    max-width: 280px;
+    background: var(--ivory);
+    border: 1px solid var(--taupe);
+    padding: clamp(14px, 2vw, 20px);
+  }
+  .ratio-drawing{
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .philo-caption{
+    margin-top: 12px;
+    font-family: var(--serif); font-style: italic;
+    font-size: 0.8rem; color: var(--sage); text-align:left;
+  }
+  /* The left column starts with a facet-mark icon (~34.5px tall)
+     plus its 22px margin-bottom before the heading begins, so the
+     heading's own top sits ~56px below the column top. This offset
+     matches that exactly, so the body copy's first line aligns with
+     the heading's first line, not with the icon above it. */
+  .philosophy .body-copy{ padding-top: 56px; }
+  .philosophy .body-copy p{ font-size: clamp(1.1rem, 1.15vw, 1.2rem); font-weight: 400; margin-bottom: 22px; color: var(--ink); max-width: 54ch; }
+  .philosophy .body-copy p:last-child{ margin-bottom:0; }
+  @media (max-width: 860px){
+    .philosophy .body-copy{ padding-top: 0; }
+    .philosophy{ grid-template-columns: 1fr; }
+    .philosophy .reveal{ position:static; }
+  }
+
+  /* ---------------- DIFFERENCE ---------------- */
+  /* Plain text, no visual column — the old diagram had a fixed-width
+     grid track that squeezed the text on mobile. */
+  .difference{ max-width: 680px; margin: 0 auto; }
+  .difference h2{
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    line-height: 1.2;
+    margin-bottom: 28px;
+  }
+  .difference p{
+    font-size: clamp(1.12rem, 1.2vw, 1.22rem);
+    color: var(--ink);
+    font-weight:400;
+    margin-bottom: 20px;
+    max-width: 56ch;
+  }
+  .difference p:last-of-type{ margin-bottom:0; }
+  .difference .emphasis{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    color: var(--ink);
+    margin: 30px 0 0;
+    padding-left: 22px;
+    border-left: 3px solid var(--sage);
+    max-width: 48ch;
+  }
+
+  /* ---------------- EXPERIENCE ---------------- */
+  .practice-head{ max-width: 640px; margin-bottom: clamp(56px, 7vw, 96px); }
+  .practice-head h2{ font-size: clamp(1.8rem, 3.2vw, 2.7rem); }
+
+  .cards{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: clamp(36px, 5vw, 64px);
+  }
+  .card .facet-mark{ margin-bottom: 24px; }
+  .card h3{ font-size: 1.3rem; margin-bottom: 16px; line-height:1.35; }
+  .card p{ font-weight:400; color: var(--ink); font-size: 1.1rem; }
+
+  @media (max-width: 900px){ .cards{ grid-template-columns: 1fr; gap:44px; } }
+
+  .practice-cta{ margin-top: clamp(56px, 7vw, 90px); }
+
+  /* ---------------- CLOSING (stone field) ---------------- */
+  .closing{ flex: 1 1 260px; max-width: 340px; }
+  .closing h2{ font-size: clamp(1.15rem, 2.2vw, 1.4rem); line-height:1.3; margin-bottom: 14px; }
+  .closing p{
+    font-weight:300;
+    color: var(--clay);
+    font-size: clamp(1rem, 1.05vw, 1.05rem);
+    margin-bottom: 10px;
+    max-width: 42ch;
+  }
+  .closing .btn{ margin-top: 16px; }
+
+  /* ---------------- FOOTER (stone field) ---------------- */
+  footer.stone-field{
+    padding: clamp(22px, 2.8vw, 34px) var(--gutter) clamp(16px, 2vw, 22px);
+  }
+  .footer-plate{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: clamp(18px, 2.4vw, 26px) clamp(24px, 3.5vw, 40px);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap: 28px;
+  }
+  footer .logo-group .logo{ color: var(--ink); }
+  footer .tagline{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--clay);
+    margin-top: 8px;
+  }
+  .footer-meta{
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--clay);
+    text-align:right;
+  }
+  .footer-meta a{ text-decoration: underline; text-underline-offset:3px; color: var(--ink); }
+
+  /* ---------------- MOBILE NAV ---------------- */
+  @media (max-width: 860px){
+    .menu-toggle{ display:flex; }
+    nav.primary-links{
+      position: fixed; top:0; right:0; bottom:0; left:0;
+      width:100%; height:100%; z-index:1050;
+      background: var(--ivory);
+      flex-direction: column; justify-content:flex-start; align-items:center;
+      gap: 20px; transform: translateY(-100%);
+      opacity: 0;
+      transition: transform .3s ease, opacity .3s ease;
+      overflow-y:auto;
+      pointer-events: none;
+      /* Was justify-content:center — with 6 tabs plus the Spatial
+         Studies sub-link, the full list is often taller than the
+         screen. Centering a too-tall flex column clips content
+         unpredictably instead of scrolling. Anchor to the top and
+         scroll down through it instead, like a normal mobile menu. */
+      padding: 90px 24px 30px;
+    }
+    header.site-nav.nav-open nav.primary-links{ transform: translateY(0); opacity:1; pointer-events:auto; }
+    /* The logo sits at a lower z-index than this panel, so mid-slide
+       (a 0.3s window) it could visually get covered — keep it above
+       the panel at all times so it never looks like it's vanished. */
+    .logo-group{ position:relative; z-index:1100; }
+    /* Compact spacing — with 6 tabs plus the Spatial Studies sub-link,
+       the previous sizing/gaps ran taller than many phone screens,
+       so items past the first one or two needed a scroll that wasn't
+       obvious was possible. Tightened enough that the full list fits
+       without scrolling on ordinary phone screens; overflow-y:auto
+       above still covers the rare very-short viewport. */
+    .tab-group{ flex-direction:column; align-items:center; gap:16px; }
+    .tab-label{ font-size: 0.82rem; }
+    .tab-caret{ display:none; }
+    /* "Spatial Studies" floats just below the Design Principles roundel
+       via absolute positioning -- same mechanism as the desktop hover
+       dropdown, just always shown since touch has no hover state. This
+       keeps the circle a true circle instead of stretching into an
+       oval to fit the extra line of text inside it. The margin-bottom
+       reserves clearance so the floating text never collides with the
+       next roundel down. */
+    .tab-cell{ margin-bottom: 22px; }
+    .tab-sub{
+      position:absolute; top:100%; left:50%;
+      transform:translateX(-50%); margin-top:8px;
+      opacity:1; pointer-events:auto;
+      background:none; border:none; padding:0; min-width:auto;
+      white-space:nowrap;
+    }
+    .tab-sub a{ padding:0; font-size:0.72rem; letter-spacing:0.06em; }
+    .nav-cta{ margin-left:0; font-size:0.72rem !important; }
+    /* The 136px desktop logo was overwhelming the fixed header on
+       narrow screens -- header height grew past the page's top
+       clearance and started overlapping the first heading below it.
+       Shrink it back down here (matching the 78px nav roundel size)
+       so mobile keeps a normal-height header. */
+    header.site-nav .logo-group svg{ width:78px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <a href="#top" class="logo-group">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.6 425.6" aria-hidden="true">
+      <circle cx="212.80" cy="212.80" r="188.50" fill="#F5F0E8"/>
+      <circle cx="212.80" cy="212.80" r="190.00" fill="none" stroke="#5B4638" stroke-width="3.00"/>
+      <circle cx="212.80" cy="212.80" r="79.80" fill="#F5F0E8" stroke="#5B4638" stroke-width="1.40"/>
+      <text x="212.80" y="206.80" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-style="italic" font-size="18.0" fill="#5B4638">GeoMera</text>
+      <text x="212.80" y="226.80" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="10.5" letter-spacing="1.8px" fill="#8A5A3B">ATELIER</text>
+      <path d="M 212.80 133.00 L 212.80 41.80 L 333.72 91.88 Z" fill="#A89682" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 212.80 133.00 L 333.72 91.88 L 269.23 156.37 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 156.37 L 333.72 91.88 L 383.80 212.80 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 156.37 L 383.80 212.80 L 292.60 212.80 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 292.60 212.80 L 383.80 212.80 L 333.72 333.72 Z" fill="#8A8A73" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 292.60 212.80 L 333.72 333.72 L 269.23 269.23 Z" fill="#A89682" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 269.23 L 333.72 333.72 L 212.80 383.80 Z" fill="#D8B36A" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 269.23 L 212.80 383.80 L 212.80 292.60 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 212.80 292.60 L 212.80 383.80 L 91.88 333.72 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 212.80 292.60 L 91.88 333.72 L 156.37 269.23 Z" fill="#8A8A73" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 269.23 L 91.88 333.72 L 41.80 212.80 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 269.23 L 41.80 212.80 L 133.00 212.80 Z" fill="#D8B36A" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 133.00 212.80 L 41.80 212.80 L 91.88 91.88 Z" fill="#A89682" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 133.00 212.80 L 91.88 91.88 L 156.37 156.37 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 156.37 L 91.88 91.88 L 212.80 41.80 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 156.37 L 212.80 41.80 L 212.80 133.00 Z" fill="#8A8A73" stroke="#5B4638" stroke-width="1.40"/>
+    </svg>
+  </a>
+
+  <nav class="primary-links" id="primaryLinks">
+    <div class="tab-group">
+      <a href="geomera-founder.html"><span class="tab-num">01</span><span class="tab-label">Founder</span></a>
+      <a href="#philosophy"><span class="tab-num">02</span><span class="tab-label">Philosophy</span></a>
+      <div class="tab-cell">
+        <a href="geomera-design-principles.html"><span class="tab-num">03</span><span class="tab-label">Design Principles</span><span class="tab-caret">▾</span></a>
+        <div class="tab-sub"><a href="spatial-studies.html">Spatial Studies</a></div>
+      </div>
+      <a href="#practice"><span class="tab-num">04</span><span class="tab-label">Practice</span></a>
+      <a href="geomera-experience.html"><span class="tab-num">05</span><span class="tab-label brand-label">GeoMera Approach</span></a>
+      <a href="geomera-textile.html"><span class="tab-num">06</span><span class="tab-label brand-label">GeoMera Textile</span></a>
+    </div>
+    <a href="#contact" class="nav-cta">Private Enquiry</a>
+  </nav>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main id="top">
+
+  <!-- ============ HERO ============ -->
+  <!-- EDIT TEXT: the main heading, subtext, and button label below
+       are all plain text inside heading/paragraph/link tags — safe to change. -->
+  <section class="hero">
+    <div class="hero-row">
+      <div class="hero-content">
+        <span class="eyebrow">A Private Real Estate Atelier</span>
+
+        <h1 class="hero-statement">Curating the Soul and Creative Direction of Exceptional Places</h1>
+
+        <p class="hero-lead">We work alongside developers, landowners, and creators to shape places with intention.</p>
+
+        <p class="hero-body">
+          GeoMera is a private real estate atelier that approaches development through the timeless relationship between geometry, proportion, place, and human experience.
+        </p>
+        <p class="hero-body">
+          Rather than treating these principles as decoration or belief, we integrate them into a contemporary development process—from the earliest evaluation of land through planning, design, construction, and the completed environment.
+        </p>
+        <p class="hero-body">Every project begins with a simple question:</p>
+
+        <div class="hero-quote">
+          <p>How should this place feel?<br>Only then do we determine what should be built.</p>
+        </div>
+
+        <a href="#difference" class="btn btn-brown">
+          Explore the GeoMera Method™
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+      <!-- Hand-triangulated rock formation — built entirely from the
+           approved palette, Desert Sage dominant. This is GeoMera's
+           land-and-geometry philosophy made visible. -->
+      <div class="hero-rock-frame">
+        <svg viewBox="0 0 480 620" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <polygon points="60.0,140.0 69.5,157.3 15.0,220.0" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="361.7,357.4 430.0,300.0 460.0,380.0" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="375.4,434.9 361.7,357.4 460.0,380.0" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="60.0,140.0 66.9,142.3 69.5,157.3" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="69.5,157.3 56.7,228.6 15.0,220.0" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="20.0,400.0 57.6,395.1 60.0,480.0" fill="#5B4638" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="57.6,395.1 187.5,416.2 60.0,480.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="151.9,506.9 90.0,560.0 60.0,480.0" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="187.5,416.2 151.9,506.9 60.0,480.0" fill="#5B4638" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="375.4,434.9 329.8,370.5 361.7,357.4" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="57.6,395.1 40.0,310.0 93.1,362.7" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="40.0,310.0 57.6,395.1 20.0,400.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="175.0,548.8 170.0,600.0 90.0,560.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="151.9,506.9 175.0,548.8 90.0,560.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="122.3,358.3 154.5,365.1 187.5,416.2" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="122.3,358.3 57.6,395.1 93.1,362.7" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="57.6,395.1 122.3,358.3 187.5,416.2" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="117.3,303.3 122.3,358.3 93.1,362.7" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="154.5,365.1 122.3,358.3 117.3,303.3" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="410.0,460.0 375.4,434.9 460.0,380.0" fill="#5B4638" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="410.0,460.0 412.3,495.7 375.4,434.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="298.6,587.8 350.0,600.0 260.0,615.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="262.7,548.3 298.6,587.8 260.0,615.0" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="262.7,548.3 228.1,413.5 375.4,434.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="329.8,370.5 228.1,413.5 247.1,384.8" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="228.1,413.5 329.8,370.5 375.4,434.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="251.6,543.2 262.7,548.3 260.0,615.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="251.6,543.2 228.1,413.5 262.7,548.3" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="404.9,183.1 430.0,130.0 460.0,210.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="361.7,357.4 323.0,268.0 430.0,300.0" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="329.8,370.5 323.0,268.0 361.7,357.4" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="91.1,147.7 56.7,228.6 69.5,157.3" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="91.1,147.7 138.1,260.4 56.7,228.6" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="66.9,142.3 91.1,147.7 69.5,157.3" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="179.9,353.3 154.5,365.1 117.3,303.3" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="138.1,260.4 179.9,353.3 117.3,303.3" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="154.5,365.1 179.9,353.3 187.5,416.2" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="228.1,413.5 179.9,353.3 247.1,384.8" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="179.9,353.3 228.1,413.5 187.5,416.2" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="56.7,228.6 47.1,281.3 15.0,220.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="47.1,281.3 40.0,310.0 15.0,220.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="189.8,540.9 151.9,506.9 205.3,513.5" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="189.8,540.9 175.0,548.8 151.9,506.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="251.6,543.2 189.8,540.9 205.3,513.5" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="175.0,548.8 189.8,540.9 170.0,600.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="170.0,600.0 189.8,540.9 260.0,615.0" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="189.8,540.9 251.6,543.2 260.0,615.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="386.9,536.4 298.6,587.8 262.7,548.3" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="412.3,495.7 386.9,536.4 375.4,434.9" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="386.9,536.4 262.7,548.3 375.4,434.9" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="298.6,587.8 386.9,536.4 350.0,600.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="350.0,600.0 386.9,536.4 430.0,540.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="386.9,536.4 412.3,495.7 430.0,540.0" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="202.3,470.6 251.6,543.2 205.3,513.5" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="251.6,543.2 202.3,470.6 228.1,413.5" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="228.1,413.5 202.3,470.6 187.5,416.2" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="151.9,506.9 202.3,470.6 205.3,513.5" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="202.3,470.6 151.9,506.9 187.5,416.2" fill="#5B4638" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="430.0,300.0 412.7,198.0 460.0,210.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="412.7,198.0 404.9,183.1 460.0,210.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="323.0,268.0 412.7,198.0 430.0,300.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="412.7,198.0 323.0,268.0 345.5,182.1" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="323.0,268.0 303.9,234.0 345.5,182.1" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="281.0,166.6 303.9,234.0 256.5,229.9" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="303.9,234.0 281.0,166.6 345.5,182.1" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="276.8,285.6 329.8,370.5 247.1,384.8" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="276.8,285.6 323.0,268.0 329.8,370.5" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="179.9,353.3 276.8,285.6 247.1,384.8" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="91.1,147.7 218.5,189.4 138.1,260.4" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="218.5,189.4 281.0,166.6 256.5,229.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="159.0,97.8 218.5,189.4 91.1,147.7" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="360.0,100.0 388.1,180.0 345.5,182.1" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="388.1,180.0 412.7,198.0 345.5,182.1" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="412.7,198.0 388.1,180.0 404.9,183.1" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="404.9,183.1 388.1,180.0 430.0,130.0" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="388.1,180.0 360.0,100.0 430.0,130.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="292.5,96.4 159.0,97.8 262.0,43.6" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="292.5,96.4 360.0,100.0 345.5,182.1" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="281.0,166.6 292.5,96.4 345.5,182.1" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="218.5,189.4 292.5,96.4 281.0,166.6" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="159.0,97.8 292.5,96.4 218.5,189.4" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="47.1,281.3 79.9,305.7 40.0,310.0" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="79.9,305.7 117.3,303.3 93.1,362.7" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="40.0,310.0 79.9,305.7 93.1,362.7" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="79.9,305.7 138.1,260.4 117.3,303.3" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="138.1,260.4 79.9,305.7 56.7,228.6" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="79.9,305.7 47.1,281.3 56.7,228.6" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="275.5,249.0 303.9,234.0 323.0,268.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="276.8,285.6 275.5,249.0 323.0,268.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="303.9,234.0 275.5,249.0 256.5,229.9" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="275.5,249.0 276.8,285.6 256.5,229.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="190.5,250.4 218.5,189.4 256.5,229.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="218.5,189.4 190.5,250.4 138.1,260.4" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="276.8,285.6 190.5,250.4 256.5,229.9" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="190.5,250.4 179.9,353.3 138.1,260.4" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="190.5,250.4 276.8,285.6 179.9,353.3" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="360.0,100.0 309.4,49.5 330.0,40.0" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="292.5,96.4 309.4,49.5 360.0,100.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="106.0,104.8 159.0,97.8 91.1,147.7" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="106.0,104.8 110.0,90.0 159.0,97.8" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="106.0,104.8 91.1,147.7 66.9,142.3" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="106.0,104.8 66.9,142.3 60.0,140.0" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="110.0,90.0 106.0,104.8 60.0,140.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="262.0,43.6 190.0,30.0 240.0,10.0" fill="#D8C6AF" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="159.0,97.8 190.0,30.0 262.0,43.6" fill="#8A8A73" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="280.0,55.0 292.5,96.4 262.0,43.6" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="280.0,55.0 309.4,49.5 292.5,96.4" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="110.0,90.0 150.0,60.0 159.0,97.8" fill="#D8B36A" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+          <polygon points="150.0,60.0 190.0,30.0 159.0,97.8" fill="#A89682" stroke="#5B4638" stroke-width="0.6" stroke-opacity="0.35"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PHILOSOPHY ============ -->
+  <!-- EDIT TEXT: heading + the 5 paragraphs below it. -->
+  <section class="bg-limestone section-pad" id="philosophy">
+    <div class="wrap philosophy">
+      <div class="reveal">
+        <h2>Every place has a story before it is built.</h2>
+        <!-- Framed plate — same bordered convention as every other
+             diagram on the site (see .principle-plate on the Design
+             Principles page). Golden spiral (whirling squares + the
+             true spiral arc through them) — ties directly to "the
+             Golden Ratio" named in the body copy. Quiet sage squares
+             as the underlying structure, a single terracotta stroke
+             for the spiral itself, so the eye reads one continuous
+             line. Left-aligned under the heading, framed and
+             captioned rather than left loose on the page. -->
+        <div class="drawing-box drawing-box--amphitheater">
+          <div class="philo-plate">
+            <svg class="ratio-drawing" viewBox="0 0 200 123.61" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <rect width="200" height="123.61" fill="#F5F0E8"/>
+              <rect x="0" y="0" width="123.607" height="123.607" fill="none" stroke="#8A8A73" stroke-width="1.1"/>
+              <rect x="123.607" y="0" width="76.393" height="76.393" fill="none" stroke="#8A8A73" stroke-width="1.1"/>
+              <rect x="152.786" y="76.393" width="47.214" height="47.214" fill="none" stroke="#8A8A73" stroke-width="1.1"/>
+              <rect x="123.607" y="94.427" width="29.18" height="29.18" fill="none" stroke="#8A8A73" stroke-width="1.1"/>
+              <rect x="123.607" y="76.393" width="18.034" height="18.034" fill="none" stroke="#8A8A73" stroke-width="1.1"/>
+              <rect x="141.641" y="76.393" width="11.146" height="11.146" fill="none" stroke="#8A8A73" stroke-width="1.1"/>
+              <path d="M 0,123.607 A 123.607,123.607 0 0 1 123.607,0 A 76.393,76.393 0 0 1 200,76.393 A 47.214,47.214 0 0 1 152.786,123.607 A 29.180,29.180 0 0 1 123.607,94.427 A 18.034,18.034 0 0 1 141.641,76.393 A 11.146,11.146 0 0 1 152.786,87.539" stroke="#A66A47" stroke-width="2.2" fill="none"/>
+            </svg>
+            <p class="philo-caption">Golden spiral, traced through nested squares at 1 : 1.618.</p>
+          </div>
+        </div>
+      </div>
+      <div class="body-copy reveal">
+        <p>Every piece of land possesses its own character, opportunities, and constraints.</p>
+        <p>GeoMera believes exceptional places emerge when development begins by understanding these qualities rather than imposing predetermined solutions.</p>
+        <p>Our work draws inspiration from timeless principles that have informed remarkable places throughout history—including geometry, proportion, the Golden Ratio, spatial harmony, historical site positioning, and the relationship between architecture, landscape, and human experience.</p>
+        <p>These principles are approached with respect, intellectual curiosity, and contemporary practicality.</p>
+        <p>They inform thoughtful decisions rather than dictate them.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE GEOMERA DIFFERENCE ============ -->
+  <!-- EDIT TEXT: eyebrow label, heading, and the 3 paragraphs below it.
+       The diagram column was removed (it was overflowing on mobile
+       and never landed well) — replaced with the Flower of Life motif,
+       recolored to sage only, sitting low-opacity behind the text.
+       Same safe sizing (width: min(1200px,150vw)) already used for the
+       footer's flower-of-life, so it can never overflow on mobile the
+       way the old diagram did. -->
+  <section class="bg-ivory section-pad" id="difference">
+    <div class="wrap">
+      <div class="difference-row">
+        <div class="difference reveal">
+          <span class="eyebrow">The GeoMera Difference</span>
+          <h2>Vision before design.</h2>
+          <p>Before architecture begins, GeoMera helps define the vision that will guide every decision throughout the life of a project.</p>
+          <p>Working alongside architects, designers, engineers, landscape architects, and specialist consultants, we establish the strategic and creative framework that brings every discipline together around a shared purpose.</p>
+          <p class="emphasis">Our role is not to replace the design team.<br>Our role is to preserve the integrity of the vision from the first conversation to the completed place.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE GEOMERA PRACTICE ============ -->
+  <!-- EDIT TEXT: section heading, the 3 card titles/descriptions,
+       and the closing button label — all plain text below. -->
+  <section class="bg-limestone section-pad" id="practice">
+    <div class="wrap">
+      <div class="practice-head reveal">
+        <h2>The GeoMera Practice</h2>
+      </div>
+
+      <div class="cards reveal">
+        <div class="card">
+          <h3>GeoMera Vision Session™</h3>
+          <p>A founder-led strategic conversation exploring the land, the client's aspirations, and the long-term vision.</p>
+        </div>
+        <div class="card">
+          <h3>GeoMera Land Blueprint™</h3>
+          <p>A guiding framework establishing the vision, spatial principles, and creative direction before architectural design begins.</p>
+        </div>
+        <div class="card">
+          <h3>GeoMera Creative Direction™</h3>
+          <p>Founder-led guidance that protects the project's vision from concept through completion.</p>
+        </div>
+      </div>
+
+      <div class="practice-cta reveal">
+        <a href="geomera-experience.html" class="btn btn-sage">
+          Discover the GeoMera Approach
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ENQUIRY (stone field — reusable pattern) ============ -->
+  <!-- EDIT TEXT: closing heading, the 2 paragraphs, and the button
+       label. The button's mailto: address is set further down. -->
+  <section class="stone-field section-pad" id="contact">
+    <div class="wrap">
+      <div class="field-plate">
+        <div class="closing reveal">
+          <h2>Every exceptional project begins with a conversation.</h2>
+          <p>GeoMera collaborates with private landowners, discerning individuals, family offices, boutique developers, and selected hospitality projects seeking a thoughtful approach to creating exceptional places.</p>
+          <p>Every engagement is approached with discretion, personal attention, and a commitment to enduring quality rather than scale.</p>
+          <a href="mailto:Ellie@geomeraatelier.com" class="btn btn-brown">
+            Tell Us About the Place You Are Imagining
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
+        </div>
+
+        <!-- Big, bold gem-cut motif in the full approved palette — a
+             clean hexagonal cut built from two concentric hexagons
+             plus a centre point: every facet edge is a straight
+             line running either radially or between rings, so
+             nothing crosses or tangles. Its own flex track: cannot
+             overlap the copy at any width; hidden below 680px. -->
+        <div class="gem-frame reveal">
+          <svg viewBox="0 0 300 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="290.0,150.0 220.0,271.2 186.0,212.4" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="290.0,150.0 186.0,212.4 222.0,150.0" fill="#A66A47" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="220.0,271.2 80.0,271.2 114.0,212.4" fill="#8A8A73" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="220.0,271.2 114.0,212.4 186.0,212.4" fill="#A89682" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="80.0,271.2 10.0,150.0 78.0,150.0" fill="#D8B36A" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="80.0,271.2 78.0,150.0 114.0,212.4" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="10.0,150.0 80.0,28.8 114.0,87.6" fill="#A66A47" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="10.0,150.0 114.0,87.6 78.0,150.0" fill="#8A8A73" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="80.0,28.8 220.0,28.8 186.0,87.6" fill="#A89682" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="80.0,28.8 186.0,87.6 114.0,87.6" fill="#D8B36A" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="220.0,28.8 290.0,150.0 222.0,150.0" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="220.0,28.8 222.0,150.0 186.0,87.6" fill="#A66A47" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="222.0,150.0 186.0,212.4 150,150" fill="#8A8A73" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="186.0,212.4 114.0,212.4 150,150" fill="#A89682" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="114.0,212.4 78.0,150.0 150,150" fill="#8A8A73" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="78.0,150.0 114.0,87.6 150,150" fill="#8A5A3B" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="114.0,87.6 186.0,87.6 150,150" fill="#8A8A73" stroke="#5B4638" stroke-width="0.8"/>
+            <polygon points="186.0,87.6 222.0,150.0 150,150" fill="#A66A47" stroke="#5B4638" stroke-width="0.8"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="stone-field">
+  <!-- EDIT TEXT: the tagline and copyright/enquiry line further
+       down are plain text — safe to change. -->
+
+  <div class="footer-plate">
+    <div class="footer-inner">
+      <div>
+        <div class="logo-group">
+          <!-- The Facet Mark, same 8-facet gem as the header — ivory
+               stroke lines instead of brown so it stays crisp against
+               the sage footer field. -->
+          <svg viewBox="0 0 40 46" width="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="20,24 20,2 28,9" fill="#D8B36A" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 28,9 36,16" fill="#8A8A73" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 36,16 28,30" fill="#A66A47" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 28,30 20,44" fill="#A89682" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 20,44 12,30" fill="#8A5A3B" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 12,30 4,16" fill="#8A8A73" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 4,16 12,9" fill="#D8B36A" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 12,9 20,2" fill="#A66A47" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+          </svg>
+          <span class="logo">GeoMera</span>
+        </div>
+        <div class="tagline">A Private Real Estate Atelier</div>
+      </div>
+      <div class="footer-meta">
+        &copy; 2026 GeoMera. All rights reserved.<br>
+        <a href="#contact">Private Enquiry</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('siteNav');
+  const onScroll = () => {
+    if (window.scrollY > 60) nav.classList.add('solid');
+    else nav.classList.remove('solid');
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const toggle = document.getElementById('menuToggle');
+  toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
+  document.querySelectorAll('#primaryLinks a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('nav-open'));
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(el => io.observe(el));
+</script>
+
+</body>
+</html>
