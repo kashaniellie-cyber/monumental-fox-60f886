@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Commissions — GeoMera Atelier</title>
+<meta name="description" content="Geometry needs a director. Signature motifs, Geometry Master Plans and fully directed Signature Projects for developers, hospitality and private clients.">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="favicon-192x192.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="canonical" href="https://www.geomeraatelier.com/commissions.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeoMera Atelier">
+<meta property="og:title" content="Commissions — GeoMera Atelier">
+<meta property="og:description" content="Geometry needs a director. Signature motifs, Geometry Master Plans and fully directed Signature Projects for developers, hospitality and private clients.">
+<meta property="og:url" content="https://www.geomeraatelier.com/commissions.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,300;1,9..144,400;1,9..144,700&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ---- Locked GeoMera Atelier header, nav and footer styles (copied verbatim from the live site) ---- */
+  :root{
+    --ivory:      #F5F0E8;
+    --limestone:  #E7DDD0;
+    --sand:       #D8C6AF;
+    --taupe:      #A89682;
+    --brown:      #5B4638;
+    --terracotta: #A66A47;
+    --clay:       #8A5A3B;
+    --sage:       #8A8A73;
+    --gold:       #D8B36A;
+    --ink: var(--brown);
+
+    --serif: "Fraunces", "Times New Roman", serif;
+    --sans:  "Jost", "Helvetica Neue", Arial, sans-serif;
+
+    --container: 1240px;
+    --gutter: clamp(24px, 6vw, 96px);
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+
+  body{
+    font-family: var(--sans);
+    color: var(--ink);
+    background: var(--ivory);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: clip;
+  }
+
+  img{ max-width:100%; display:block; }
+  a{ color:inherit; text-decoration:none; }
+
+  h1,h2,h3{
+    font-family: var(--serif);
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  header.site-nav{
+    position: fixed;
+    top:0; left:0; right:0;
+    z-index: 1000;
+    display:grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items:center;
+    column-gap: 20px;
+    padding: 26px var(--gutter);
+    background: rgba(245,240,232,0);
+    border-bottom: 1px solid transparent;
+    transition: background-color .5s ease, padding .4s ease, border-color .4s ease;
+  }
+  header.site-nav.solid{
+    background: rgba(245,240,232,0.94);
+    backdrop-filter: blur(10px);
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-bottom: 2px solid var(--sage);
+  }
+  .logo-group{ display:flex; align-items:center; gap:12px; grid-column:1; justify-self:start; }
+  .logo-group svg{ width:58px; height:auto; }
+  header.site-nav .logo-group svg{ width:136px; }
+  .logo{
+    font-family: var(--serif);
+    font-size: 1.35rem;
+    letter-spacing: 0.16em;
+    color: var(--ink);
+  }
+  /* Nav redesigned as an equal-width "tab" index — each link its own
+     fixed-width cell with a thin divider line and a small gold index
+     number above the label, like an architectural drawing index or
+     museum wayfinding sign. Every tab occupies the same space as its
+     neighbor regardless of label length ("Founder" vs "GeoMera
+     Experience"), so the row reads as one measured, designed object
+     rather than loosely-spaced text links. The CTA stays a distinct
+     button outside the tab-group, since it's an action, not a page. */
+  nav.primary-links{ display:flex; align-items:center; gap: 0; grid-column:2; justify-self:center; }
+  .tab-group{ display:flex; align-items:center; gap: 12px; }
+  /* Each tab lives inside its own sage roundel -- a small echo of the
+     circular Gem Roundel logo, so the whole nav reads as one family of
+     round marks rather than the logo sitting alone against text links.
+     Idle: quiet sage-tinted glass ring. Hover: the circle fills solid
+     sage, the label flips to ivory, and a soft gold halo blooms around
+     the edge -- the same warmth as light catching the logo's facets. */
+  .tab-group > a, .tab-group > .tab-cell{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width: 78px; height: 78px;
+    flex: 0 0 78px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 4px 9px;
+    background: rgba(138,138,115,0.08);
+    border: 1.5px solid var(--sage);
+    position: relative;
+    transition: background-color .3s ease, border-color .3s ease, box-shadow .3s ease, transform .3s ease;
+  }
+  .tab-num{ display:none; }
+  /* RULE: nav tab labels are never forced into ALL CAPS. Every tab
+     (Founder, Philosophy, Design Principles, Practice, GeoMera
+     Approach, GeoMera Design) renders in the exact case typed in the
+     HTML -- title case, no text-transform. This was inconsistent
+     before (some tabs uppercase, some not) and is now locked as one
+     rule for the whole row, not a per-tab exception. */
+  .tab-label{
+    font-size: 0.62rem; letter-spacing: 0.02em; line-height: 1.2; color: var(--ink);
+    font-weight: 600;
+    text-align:center;
+    transition: color .3s ease;
+  }
+  .tab-group > a:hover, .tab-cell:hover{
+    background: var(--sage);
+    border-color: var(--sage);
+    box-shadow: 0 0 0 4px rgba(216,179,106,0.32);
+    transform: translateY(-2px);
+  }
+  .tab-group > a:hover .tab-label, .tab-cell:hover .tab-label{
+    color: var(--ivory);
+  }
+  /* "Design Principles" carries Spatial Studies as a nested sub-item —
+     Spatial Studies is a growing archive of case studies that apply
+     the principles above to specific historic plans, so it now sits
+     one level down in the nav rather than as its own top-level
+     destination. Desktop: reveals as a small bordered dropdown plate
+     on hover/focus, matching the site's other bordered "plate" boxes.
+     Mobile: shown as a static indented link underneath instead, since
+     there's no hover state on touch. */
+  .tab-cell{ display:flex; flex-direction:column; align-items:center; justify-content:center; gap:5px; }
+  .tab-cell > a{ display:flex; flex-direction:column; align-items:center; gap:5px; position:relative; }
+  .tab-caret{ font-size:0.48rem; color: var(--gold); margin-top:-1px; }
+  .tab-sub{
+    position:absolute; top:100%; left:50%; transform:translateX(-50%) translateY(-4px);
+    background: var(--ivory); border:1px solid var(--taupe);
+    min-width:168px; padding:6px 0;
+    opacity:0; pointer-events:none;
+    transition: opacity .25s ease, transform .25s ease;
+    z-index:20;
+  }
+  .tab-cell:hover .tab-sub, .tab-cell:focus-within .tab-sub{
+    opacity:1; pointer-events:auto; transform:translateX(-50%) translateY(0);
+  }
+  .tab-sub a{
+    display:block; padding:9px 18px;
+    font-size:0.68rem; letter-spacing:0.1em; text-transform:uppercase;
+    color: var(--ink); white-space:nowrap;
+  }
+  .tab-sub a:hover{ background: var(--limestone); color: var(--terracotta); }
+  /* Kept at 1.2rem (19.2px) bold — the WCAG floor for Ivory-on-Sage
+     text (AA "large text" needs >=18.66px bold; this site's sage/
+     ivory combo tests at 3.1:1 contrast, which only clears AA at
+     that size). The "too big" fix is tighter padding, not smaller
+     text, plus a smooth transition so it never visually jumps
+     against the header's own padding animation when scrolling. */
+  .nav-cta{
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    width: 78px; height: 78px;
+    flex: 0 0 78px;
+    aspect-ratio: 1 / 1;
+    box-sizing: border-box;
+    border-radius: 50%;
+    padding: 4px 9px;
+    background: var(--sage);
+    border: 1.5px solid var(--sage);
+    color: var(--ivory) !important;
+    font-size: 0.7rem !important; font-weight: 700 !important;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
+    text-align:center; text-transform:uppercase;
+    font-family: var(--serif) !important; font-style: italic;
+    margin-left: 18px;
+    transition: background-color .3s ease, color .3s ease, box-shadow .3s ease, transform .3s ease;
+  }
+  .nav-cta:hover{
+    background: var(--gold);
+    border-color: var(--gold);
+    color: var(--ink) !important;
+    box-shadow: 0 0 0 4px rgba(138,138,115,0.28);
+    transform: translateY(-2px);
+  }
+
+  .menu-toggle{
+    display:none; flex-direction:column; gap:5px;
+    background:none; border:none; cursor:pointer; z-index:1100;
+    grid-column:3; justify-self:end;
+  }
+  .menu-toggle span{ width:26px; height:2px; background: var(--ink); }
+
+  .stone-field{
+    position:relative;
+    background: var(--sage);
+    overflow:hidden;
+  }
+  /* ---------------- FOOTER (stone field) ---------------- */
+  footer.stone-field{
+    padding: clamp(22px, 2.8vw, 34px) var(--gutter) clamp(16px, 2vw, 22px);
+  }
+  .footer-plate{
+    max-width: var(--container);
+    margin: 0 auto;
+    padding: clamp(18px, 2.4vw, 26px) clamp(24px, 3.5vw, 40px);
+  }
+  .footer-inner{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-end;
+    flex-wrap:wrap;
+    gap: 28px;
+  }
+  footer .logo-group .logo{ color: var(--ink); }
+  footer .tagline{
+    font-family: var(--serif);
+    font-style: italic;
+    font-size: 0.92rem;
+    color: var(--clay);
+    margin-top: 8px;
+  }
+  .footer-meta{
+    font-size: 0.7rem;
+    letter-spacing: 0.06em;
+    color: var(--clay);
+    text-align:right;
+  }
+  .footer-meta a{ text-decoration: underline; text-underline-offset:3px; color: var(--ink); }
+
+  /* ---------------- MOBILE NAV ---------------- */
+  @media (max-width: 860px){
+    .menu-toggle{ display:flex; }
+    nav.primary-links{
+      position: fixed; top:0; right:0; bottom:0; left:0;
+      width:100%; height:100%; z-index:1050;
+      background: var(--ivory);
+      flex-direction: column; justify-content:flex-start; align-items:center;
+      gap: 20px; transform: translateY(-100%);
+      opacity: 0;
+      transition: transform .3s ease, opacity .3s ease;
+      overflow-y:auto;
+      pointer-events: none;
+      /* Was justify-content:center — with 6 tabs plus the Spatial
+         Studies sub-link, the full list is often taller than the
+         screen. Centering a too-tall flex column clips content
+         unpredictably instead of scrolling. Anchor to the top and
+         scroll down through it instead, like a normal mobile menu. */
+      padding: 90px 24px 30px;
+    }
+    header.site-nav.nav-open nav.primary-links{ transform: translateY(0); opacity:1; pointer-events:auto; }
+    /* The logo sits at a lower z-index than this panel, so mid-slide
+       (a 0.3s window) it could visually get covered — keep it above
+       the panel at all times so it never looks like it's vanished. */
+    .logo-group{ position:relative; z-index:1100; }
+    /* Compact spacing — with 6 tabs plus the Spatial Studies sub-link,
+       the previous sizing/gaps ran taller than many phone screens,
+       so items past the first one or two needed a scroll that wasn't
+       obvious was possible. Tightened enough that the full list fits
+       without scrolling on ordinary phone screens; overflow-y:auto
+       above still covers the rare very-short viewport. */
+    .tab-group{ flex-direction:column; align-items:center; gap:16px; }
+    .tab-label{ font-size: 0.82rem; }
+    .tab-caret{ display:none; }
+    /* "Spatial Studies" floats just below the Design Principles roundel
+       via absolute positioning -- same mechanism as the desktop hover
+       dropdown, just always shown since touch has no hover state. This
+       keeps the circle a true circle instead of stretching into an
+       oval to fit the extra line of text inside it. The margin-bottom
+       reserves clearance so the floating text never collides with the
+       next roundel down. */
+    .tab-cell{ margin-bottom: 22px; }
+    .tab-sub{
+      position:absolute; top:100%; left:50%;
+      transform:translateX(-50%); margin-top:8px;
+      opacity:1; pointer-events:auto;
+      background:none; border:none; padding:0; min-width:auto;
+      white-space:nowrap;
+    }
+    .tab-sub a{ padding:0; font-size:0.72rem; letter-spacing:0.06em; }
+    .nav-cta{ margin-left:0; font-size:0.72rem !important; }
+    /* The 136px desktop logo was overwhelming the fixed header on
+       narrow screens -- header height grew past the page's top
+       clearance and started overlapping the first heading below it.
+       Shrink it back down here (matching the 78px nav roundel size)
+       so mobile keeps a normal-height header. */
+    header.site-nav .logo-group svg{ width:78px; }
+  }
+
+/* ---- Page clearance below the fixed header ---- */
+main.atelier-page{ padding-top: 188px; }
+@media (max-width: 860px){ main.atelier-page{ padding-top: 130px; } }
+.tab-group > a[aria-current="page"]{ background: var(--sage); }
+.tab-group > a[aria-current="page"] .tab-label{ color: var(--ivory); }
+</style>
+</head>
+<body>
+
+<header class="site-nav" id="siteNav">
+  <a href="index.html" class="logo-group" aria-label="GeoMera Atelier home">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 425.6 425.6" aria-hidden="true">
+      <circle cx="212.80" cy="212.80" r="188.50" fill="#F5F0E8"/>
+      <circle cx="212.80" cy="212.80" r="190.00" fill="none" stroke="#5B4638" stroke-width="3.00"/>
+      <circle cx="212.80" cy="212.80" r="79.80" fill="#F5F0E8" stroke="#5B4638" stroke-width="1.40"/>
+      <text x="212.80" y="206.80" text-anchor="middle" font-family="Fraunces, Georgia, serif" font-weight="600" font-style="italic" font-size="18.0" fill="#5B4638">GeoMera</text>
+      <text x="212.80" y="226.80" text-anchor="middle" font-family="Jost, Arial, sans-serif" font-size="10.5" letter-spacing="1.8px" fill="#8A5A3B">ATELIER</text>
+      <path d="M 212.80 133.00 L 212.80 41.80 L 333.72 91.88 Z" fill="#A89682" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 212.80 133.00 L 333.72 91.88 L 269.23 156.37 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 156.37 L 333.72 91.88 L 383.80 212.80 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 156.37 L 383.80 212.80 L 292.60 212.80 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 292.60 212.80 L 383.80 212.80 L 333.72 333.72 Z" fill="#8A8A73" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 292.60 212.80 L 333.72 333.72 L 269.23 269.23 Z" fill="#A89682" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 269.23 L 333.72 333.72 L 212.80 383.80 Z" fill="#D8B36A" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 269.23 269.23 L 212.80 383.80 L 212.80 292.60 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 212.80 292.60 L 212.80 383.80 L 91.88 333.72 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 212.80 292.60 L 91.88 333.72 L 156.37 269.23 Z" fill="#8A8A73" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 269.23 L 91.88 333.72 L 41.80 212.80 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 269.23 L 41.80 212.80 L 133.00 212.80 Z" fill="#D8B36A" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 133.00 212.80 L 41.80 212.80 L 91.88 91.88 Z" fill="#A89682" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 133.00 212.80 L 91.88 91.88 L 156.37 156.37 Z" fill="#8A5A3B" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 156.37 L 91.88 91.88 L 212.80 41.80 Z" fill="#A66A47" stroke="#5B4638" stroke-width="1.40"/>
+      <path d="M 156.37 156.37 L 212.80 41.80 L 212.80 133.00 Z" fill="#8A8A73" stroke="#5B4638" stroke-width="1.40"/>
+    </svg>
+  </a>
+
+  <nav class="primary-links" id="primaryLinks">
+    <div class="tab-group">
+      <a href="index.html#story"><span class="tab-num">01</span><span class="tab-label">Ellie’s Story</span></a>
+      <a href="geometry.html"><span class="tab-num">02</span><span class="tab-label">Geometry</span></a>
+      <a href="commissions.html" aria-current="page"><span class="tab-num">03</span><span class="tab-label">Commissions</span></a>
+    </div>
+    <a href="commissions.html#contact" class="nav-cta">Private Enquiry</a>
+  </nav>
+
+  <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<main class="atelier-page" id="top">
+
+<div style="background: #F5F0E8; color: #5B4638; font-family: 'Jost', system-ui, sans-serif; font-weight: 400; width: 100%">
+
+
+
+<!-- HERO -->
+<section style="max-width: 1200px; margin: 0 auto; padding: 96px 24px 88px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 40px 80px; align-items: flex-end">
+<div style="flex: 1.3 1 520px; min-width: 0">
+<p style="margin: 0 0 28px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">Commissions</p>
+<h1 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(44px, 6vw, 78px); line-height: 1.03; letter-spacing: -0.01em">Geometry needs a <span style="font-style: italic">director.</span></h1>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 18px; font-size: 18px; line-height: 1.75; font-weight: 300">
+<p style="margin: 0">A motif on its own is not a design. Where it appears, at what scale, in which colours — and where it deliberately does not — is what makes a space feel calm rather than crowded.</p>
+<p style="margin: 0">Ellie Kashani directs that from the first floor plan to the final installation, so the geometry keeps its power in every room.</p>
+</div>
+</section>
+
+<!-- WHO -->
+<section aria-label="Who we work with" style="background: #5B4638; color: #F5F0E8">
+<div style="max-width: 1200px; margin: 0 auto; padding: 48px 24px; box-sizing: border-box; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 300">Developers</span><span style="font-size: 15px; line-height: 1.6; font-weight: 300">Residential buildings where one design language carries every unit and every common space.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 300">Hospitality</span><span style="font-size: 15px; line-height: 1.6; font-weight: 300">Hotels, residences and restaurants that need an identity guests feel before they read it.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 300">Private clients</span><span style="font-size: 15px; line-height: 1.6; font-weight: 300">Homes with a design that exists nowhere else and belongs to them alone.</span></div>
+<div style="display: flex; flex-direction: column; gap: 8px"><span style="font-family: 'Fraunces', serif; font-size: 24px; font-weight: 300">Architects &amp; designers</span><span style="font-size: 15px; line-height: 1.6; font-weight: 300">Studios who want a signature surface language within their own scheme.</span></div>
+</div>
+</section>
+
+<!-- THE GEOMERA EFFECT -->
+<section aria-labelledby="effect-title" style="background: #E7DDD0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 112px 24px; box-sizing: border-box">
+<div style="display: flex; flex-wrap: wrap; gap: 32px 80px; margin-bottom: 56px">
+<div style="flex: 1 1 380px; min-width: 0">
+<p style="margin: 0 0 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">What a GeoMera signature does</p>
+<h2 id="effect-title" style="margin: 0; font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(34px, 4vw, 52px); line-height: 1.1">A feeling guests can’t name — <span style="font-style: italic">but never forget.</span></h2>
+</div>
+<p style="flex: 1.2 1 440px; min-width: 0; margin: 0; align-self: flex-end; font-size: 18px; line-height: 1.75; font-weight: 300">A busy, characterful interior does not have to be a restless one. Geometry and a palette drawn from nature give even the richest boutique space an underlying order — the quiet harmony that makes a place feel settled, generous and complete.</p>
+</div>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 32px">
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid #A89682">
+<span style="font-family: 'Fraunces', serif; font-size: 15px; font-style: italic">i.</span>
+<span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300; line-height: 1.2">Harmony</span>
+<span style="font-size: 16px; line-height: 1.7; font-weight: 300">Most interiors are designed corner by corner, until no two corners belong to the same place. A GeoMera property is designed as one composition: every room speaks the same language, so the whole building feels whole.</span>
+</li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid #A89682">
+<span style="font-family: 'Fraunces', serif; font-size: 15px; font-style: italic">ii.</span>
+<span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300; line-height: 1.2">Calm</span>
+<span style="font-size: 16px; line-height: 1.7; font-weight: 300">Colour taken only from the site’s own stone, soil, planting and light. Guests may not be able to name what they feel — but they feel it, and they settle.</span>
+</li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid #A89682">
+<span style="font-family: 'Fraunces', serif; font-size: 15px; font-style: italic">iii.</span>
+<span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300; line-height: 1.2">Space</span>
+<span style="font-size: 16px; line-height: 1.7; font-weight: 300">One continuous geometry, scaled with intention, lets the eye travel from room to room without interruption. Smaller and boutique properties read as more spacious, more grand, more considered.</span>
+</li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid #A89682">
+<span style="font-family: 'Fraunces', serif; font-size: 15px; font-style: italic">iv.</span>
+<span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300; line-height: 1.2">Story</span>
+<span style="font-size: 16px; line-height: 1.7; font-weight: 300">Each property receives a signature that exists nowhere else, rooted in its place. It feels authentic rather than fashionable — and it grows richer with age instead of looking dated.</span>
+</li>
+<li style="display: flex; flex-direction: column; gap: 12px; padding-top: 22px; border-top: 1px solid #A89682">
+<span style="font-family: 'Fraunces', serif; font-size: 15px; font-style: italic">v.</span>
+<span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300; line-height: 1.2">Recognition</span>
+<span style="font-size: 16px; line-height: 1.7; font-weight: 300">The signature is visible in every photograph and every film taken on the property. A guest’s picture becomes unmistakably yours — and memorable long after the stay.</span>
+</li>
+</ol>
+</div>
+</section>
+
+<!-- THREE LEVELS -->
+<section aria-labelledby="levels-title" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px; box-sizing: border-box">
+<p style="margin: 0 0 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">Three ways to work together</p>
+<h2 id="levels-title" style="margin: 0 0 56px; max-width: 760px; font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(34px, 4vw, 52px); line-height: 1.1">From a single motif to a <span style="font-style: italic">whole building.</span></h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; align-items: stretch">
+
+<article style="border: 1px solid #D8C6AF; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px">
+<span style="font-family: 'Fraunces', serif; font-size: 22px; font-style: italic">I.</span>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.15">Signature Motif</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; font-weight: 300">An original geometric motif and palette, created for one project and one client.</p>
+<ul style="margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; font-weight: 300">
+<li>Motif built from a single geometric construction</li>
+<li>Palette drawn from the site’s own surroundings</li>
+<li>Seamless repeat files in agreed scales</li>
+<li>A usage guide: where, how large, which colours</li>
+<li>Exclusive use for the named project</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid #D8C6AF; font-size: 13px; letter-spacing: 0.08em">For a single room, a textile or a rug.</p>
+</article>
+
+<article style="border: 1px solid #D8C6AF; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px">
+<span style="font-family: 'Fraunces', serif; font-size: 22px; font-style: italic">II.</span>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.15">Geometry Master Plan</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; font-weight: 300">Send the floor plans; receive the complete system for the property.</p>
+<ul style="margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; font-weight: 300">
+<li>Everything in the Signature Motif</li>
+<li>Room-by-room placement: floors, walls, fireplace, splashback, rugs, upholstery</li>
+<li>Scale for each space, from lobby to cushion</li>
+<li>Colour proportions per room, and which colours may meet</li>
+<li>Transitions, so the whole property reads as one composition</li>
+<li>Drawings, renders and material specifications</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid #D8C6AF; font-size: 13px; letter-spacing: 0.08em">For a home, a residence or a building, delivered to your own team.</p>
+</article>
+
+<article style="background: #5B4638; color: #F5F0E8; padding: 36px 32px; display: flex; flex-direction: column; gap: 18px">
+<div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px"><span style="font-family: 'Fraunces', serif; font-size: 22px; font-style: italic">III.</span><span style="font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; border: 1px solid #A89682; padding: 6px 10px">Flagship</span></div>
+<h3 style="margin: 0; font-family: 'Fraunces', serif; font-weight: 400; font-size: 30px; line-height: 1.15">Signature Project</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.7; font-weight: 300">Full direction, from the first drawing to the day the space is handed over.</p>
+<ul style="margin: 0; padding: 0 0 0 18px; display: flex; flex-direction: column; gap: 8px; font-size: 15px; line-height: 1.6; font-weight: 300">
+<li>Everything in the Geometry Master Plan</li>
+<li>Production with specialist makers selected and approved by the studio — tile and stone, rugs, textiles, furniture</li>
+<li>Sample and colour approval at every stage</li>
+<li>Production oversight and quality control</li>
+<li>Site visits during installation, and final sign-off</li>
+<li>A numbered, signed certificate of authenticity</li>
+</ul>
+<p style="margin: auto 0 0; padding-top: 14px; border-top: 1px solid #A89682; font-size: 13px; letter-spacing: 0.08em">The client never has to find a factory. Accepted by invitation, a few each year.</p>
+</article>
+
+</div>
+</section>
+
+<!-- MASTER PLAN EXPLAINED -->
+<section aria-labelledby="plan-title" style="background: #E7DDD0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 112px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; gap: 48px 72px; align-items: center">
+<div style="flex: 1 1 360px; min-width: 0; display: flex; flex-direction: column; gap: 22px">
+<p style="margin: 0; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">The Master Plan</p>
+<h2 id="plan-title" style="margin: 0; font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(34px, 4vw, 48px); line-height: 1.1">One motif. Five scales. <span style="font-style: italic">Never too much.</span></h2>
+<p style="margin: 0; font-size: 17px; line-height: 1.75; font-weight: 300">The same geometry appears in every room, but never the same way twice. It is large where you arrive, quiet where you rest, and absent where the eye needs space.</p>
+<ol style="margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 14px; font-size: 15px; line-height: 1.55; font-weight: 300">
+<li style="display: flex; gap: 14px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #5B4638; color: #F5F0E8; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 14px">1</span><span><span style="font-weight: 500">Entrance</span> — the motif at its largest, on the floor, in Desert Sage.</span></li>
+<li style="display: flex; gap: 14px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #5B4638; color: #F5F0E8; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 14px">2</span><span><span style="font-weight: 500">Living</span> — a rug at middle scale, echoed in a fine border around the fireplace.</span></li>
+<li style="display: flex; gap: 14px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #5B4638; color: #F5F0E8; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 14px">3</span><span><span style="font-weight: 500">Kitchen</span> — a single band of splashback; the rest is calm.</span></li>
+<li style="display: flex; gap: 14px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #5B4638; color: #F5F0E8; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 14px">4</span><span><span style="font-weight: 500">Bedroom</span> — the finest scale, on the headboard and textiles only.</span></li>
+<li style="display: flex; gap: 14px"><span style="flex: 0 0 28px; height: 28px; border-radius: 50%; background: #5B4638; color: #F5F0E8; display: flex; align-items: center; justify-content: center; font-family: 'Fraunces', serif; font-size: 14px">5</span><span><span style="font-weight: 500">Bath</span> — a full floor at medium scale, returning to the colour of the entrance.</span></li>
+</ol>
+</div>
+<figure style="flex: 1.4 1 480px; min-width: 0; margin: 0; display: flex; flex-direction: column; gap: 12px">
+<img src="assets/floorplan.svg" alt="Floor plan of a residence showing the same eight-pointed star motif at five scales: large on the entrance floor, medium as a living-room rug and bathroom floor, and fine as a kitchen splashback band and bedroom headboard" style="width: 100%; aspect-ratio: 900 / 560; display: block">
+<figcaption style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase">Illustrative Master Plan · one motif, five scales</figcaption>
+</figure>
+</div>
+</section>
+
+<!-- PROCESS -->
+<section aria-labelledby="process-title" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px; box-sizing: border-box">
+<p style="margin: 0 0 20px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">The process</p>
+<h2 id="process-title" style="margin: 0 0 56px; font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(34px, 4vw, 52px); line-height: 1.1">From conversation to <span style="font-style: italic">certificate.</span></h2>
+<ol style="list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0; border-top: 1px solid #D8C6AF">
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">01</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Conversation</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">The project, the place, the people who will live in it. Plans and site photographs if available.</span></li>
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">02</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Commission</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">Scope and fee agreed; a deposit reserves the studio’s time.</span></li>
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">03</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Palette from the site</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">Colours drawn from the stone, soil, planting and light of the place itself.</span></li>
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">04</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Design</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">The motif is constructed, then placed room by room in the Master Plan.</span></li>
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">05</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Samples</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">Tile, stone, weave and fabric samples approved for colour and craft before production.</span></li>
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">06</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Production &amp; installation</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">Made by workshops selected for the project, overseen through to installation on site.</span></li>
+<li style="padding: 28px 24px 32px 0; border-bottom: 1px solid #D8C6AF; display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 34px; font-weight: 300; color: #A66A47">07</span><span style="font-family: 'Fraunces', serif; font-size: 21px">Certificate</span><span style="font-size: 15px; line-height: 1.65; font-weight: 300">A numbered certificate of authenticity, signed by Ellie Kashani, records the design as an original.</span></li>
+</ol>
+</section>
+
+<!-- PRINCIPLES -->
+<section aria-labelledby="principles-title" style="background: #E7DDD0">
+<div style="max-width: 1200px; margin: 0 auto; padding: 96px 24px; box-sizing: border-box">
+<h2 id="principles-title" style="margin: 0 0 40px; font-size: 12px; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase">What every commission promises</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 36px">
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300">Exclusivity</span><span style="font-size: 15px; line-height: 1.7; font-weight: 300">Each design is made for one place. The client holds exclusive use; GeoMera Atelier never repeats it elsewhere.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300">Restraint</span><span style="font-size: 15px; line-height: 1.7; font-weight: 300">Geometry where it matters, silence where it does not. The power of a motif depends on where it is left out.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300">Craft</span><span style="font-size: 15px; line-height: 1.7; font-weight: 300">Every piece made by workshops chosen and approved by the studio, to the same standard of colour and precision.</span></div>
+<div style="display: flex; flex-direction: column; gap: 10px"><span style="font-family: 'Fraunces', serif; font-size: 26px; font-weight: 300">Provenance</span><span style="font-size: 15px; line-height: 1.7; font-weight: 300">A signed, numbered record of authorship, so the design keeps its value for as long as the building stands.</span></div>
+</div>
+<p style="margin: 56px 0 0; padding-top: 24px; border-top: 1px solid #A89682; font-size: 15px; line-height: 1.7; font-weight: 300; max-width: 760px"><span style="font-family: 'Fraunces', serif; font-style: italic; font-size: 18px">The Signature.</span> GeoMera’s own motif, the Ogee Facet Trellis, is reserved for GeoMera projects and is not available for commission.</p>
+</div>
+</section>
+
+<!-- CTA -->
+<section id="contact" aria-labelledby="cta-title" style="max-width: 1200px; margin: 0 auto; padding: 112px 24px; box-sizing: border-box; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 32px">
+<div style="flex: 1 1 520px; min-width: 0">
+<h2 id="cta-title" style="margin: 0 0 20px; font-family: 'Fraunces', serif; font-weight: 300; font-size: clamp(34px, 4vw, 52px); line-height: 1.1">Begin with a conversation.</h2>
+<p style="margin: 0; max-width: 560px; font-size: 18px; line-height: 1.75; font-weight: 300">Fees are set per project, once the scope is understood. Write directly, and Ellie will reply personally.</p>
+</div>
+<a href="mailto:Ellie@geomeraatelier.com" style="display: inline-flex; align-items: center; min-height: 48px; padding: 0 32px; background: #5B4638; color: #F5F0E8; text-decoration: none; font-size: 13px; letter-spacing: 0.14em; text-transform: uppercase">Ellie@geomeraatelier.com</a>
+</section>
+
+
+
+</div>
+
+</main>
+
+<footer class="stone-field">
+  <!-- EDIT TEXT: the tagline and copyright/enquiry line further
+       down are plain text — safe to change. -->
+
+  <div class="footer-plate">
+    <div class="footer-inner">
+      <div>
+        <div class="logo-group">
+          <!-- The Facet Mark, same 8-facet gem as the header — ivory
+               stroke lines instead of brown so it stays crisp against
+               the sage footer field. -->
+          <svg viewBox="0 0 40 46" width="30" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <polygon points="20,24 20,2 28,9" fill="#D8B36A" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 28,9 36,16" fill="#8A8A73" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 36,16 28,30" fill="#A66A47" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 28,30 20,44" fill="#A89682" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 20,44 12,30" fill="#8A5A3B" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 12,30 4,16" fill="#8A8A73" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 4,16 12,9" fill="#D8B36A" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+            <polygon points="20,24 12,9 20,2" fill="#A66A47" stroke="#F5F0E8" stroke-width="0.6" stroke-opacity="0.8"/>
+          </svg>
+          <span class="logo">GeoMera</span>
+        </div>
+        <div class="tagline">Geometry · Nature · Exclusivity</div>
+      </div>
+      <div class="footer-meta">
+        &copy; 2026 GeoMera. All rights reserved.<br>
+        <a href="commissions.html#contact">Private Enquiry</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('siteNav');
+  const onScroll = () => {
+    if (window.scrollY > 60) nav.classList.add('solid');
+    else nav.classList.remove('solid');
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  const toggle = document.getElementById('menuToggle');
+  toggle.addEventListener('click', () => nav.classList.toggle('nav-open'));
+  document.querySelectorAll('#primaryLinks a').forEach(a => {
+    a.addEventListener('click', () => nav.classList.remove('nav-open'));
+  });
+
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15 });
+  reveals.forEach(el => io.observe(el));
+</script>
+</body>
+</html>
